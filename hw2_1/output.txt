@@ -1,0 +1,95 @@
+ubuntu@linux:~/BigData/hw$ python3 ./hw2_1/hw2_1.py
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/15 01:02:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/home/ubuntu/.local/lib/python3.6/site-packages/pyspark/context.py:238: FutureWarning:
+
+Python 3.6 support is deprecated in Spark 3.2.
+
+
+
+Для каждой станции количество начала поездок и количество завершения поездок:
++----------------------------+----------+                                       
+|start station zone          |sum(count)|
++----------------------------+----------+
+|East Village                |43333     |
+|East Chelsea                |38967     |
+|Murray Hill                 |32572     |
+|Union Sq                    |30527     |
+|Greenwich Village North     |26485     |
+|Clinton East                |25364     |
+|TriBeCa/Civic Center        |24744     |
+|Lower East Side             |23070     |
+|Flatiron                    |22976     |
+|Garment District            |20281     |
+|Central Park                |19955     |
+|West Chelsea/Hudson Yards   |19421     |
+|Williamsburg (North Side)   |17692     |
+|Kips Bay                    |17324     |
+|Two Bridges/Seward Park     |17224     |
+|West Village                |17214     |
+|Penn Station/Madison Sq West|16754     |
+|Park Slope                  |16025     |
+|Fort Greene                 |15506     |
+|Little Italy/NoLiTa         |15338     |
++----------------------------+----------+
+only showing top 20 rows
+
+
+
+Для каждой станции количество завершения поездок:
++----------------------------+----------+                                       
+|end station zone            |sum(count)|
++----------------------------+----------+
+|East Village                |43170     |
+|East Chelsea                |39395     |
+|Murray Hill                 |32578     |
+|Union Sq                    |31464     |
+|Greenwich Village North     |27054     |
+|TriBeCa/Civic Center        |25350     |
+|Clinton East                |25241     |
+|Flatiron                    |23238     |
+|Lower East Side             |23236     |
+|Garment District            |20334     |
+|West Chelsea/Hudson Yards   |19613     |
+|Central Park                |18748     |
+|Williamsburg (North Side)   |18195     |
+|West Village                |17607     |
+|Kips Bay                    |17095     |
+|Two Bridges/Seward Park     |16851     |
+|Penn Station/Madison Sq West|16720     |
+|Fort Greene                 |16413     |
+|Park Slope                  |15517     |
+|Little Italy/NoLiTa         |15449     |
++----------------------------+----------+
+only showing top 20 rows
+
+
+
+Станции по убыванию количества поездок:
++----------------------------+--------------+                                   
+|station zone                |start plus end|
++----------------------------+--------------+
+|East Village                |86503         |
+|East Chelsea                |78362         |
+|Murray Hill                 |65150         |
+|Union Sq                    |61991         |
+|Greenwich Village North     |53539         |
+|Clinton East                |50605         |
+|TriBeCa/Civic Center        |50094         |
+|Lower East Side             |46306         |
+|Flatiron                    |46214         |
+|Garment District            |40615         |
+|West Chelsea/Hudson Yards   |39034         |
+|Central Park                |38703         |
+|Williamsburg (North Side)   |35887         |
+|West Village                |34821         |
+|Kips Bay                    |34419         |
+|Two Bridges/Seward Park     |34075         |
+|Penn Station/Madison Sq West|33474         |
+|Fort Greene                 |31919         |
+|Park Slope                  |31542         |
+|Little Italy/NoLiTa         |30787         |
++----------------------------+--------------+
+only showing top 20 rows

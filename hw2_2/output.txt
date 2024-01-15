@@ -1,0 +1,11 @@
+ubuntu@linux:~/BigData/hw$ python3 ./hw2_2/hw2_2.py
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/15 01:07:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/home/ubuntu/.local/lib/python3.6/site-packages/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+Максимальная дистанция: 15326.564453125                                         
+Средняя дистанция: 1640.3747987443037
+Стандартное отклонение: 1288.6764849734438
+Медиана: 1262.9132080078125
