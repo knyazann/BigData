@@ -1,0 +1,255 @@
+ubuntu@linux:~/BigData/hw$ python3 ./hw4_1/hw4_1.py
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/15 01:57:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/home/ubuntu/.local/lib/python3.6/site-packages/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+Количество фильмов по всем жанрам:
++------------------+-----+
+|             genre|count|
++------------------+-----+
+|             Drama|33681|
+|            Comedy|22829|
+|          Thriller|11675|
+|           Romance|10172|
+|            Action| 9563|
+|       Documentary| 9283|
+|            Horror| 8570|
+|(no genres listed)| 7060|
+|             Crime| 6917|
+|         Adventure| 5349|
+|            Sci-Fi| 4850|
+|         Animation| 4579|
+|          Children| 4367|
+|           Mystery| 3972|
+|           Fantasy| 3821|
+|               War| 2301|
+|           Western| 1690|
+|           Musical| 1059|
+|         Film-Noir|  354|
+|              IMAX|  195|
++------------------+-----+
+only showing top 20 rows
+
+VARIANT 1
+Топ-10 фильмов с наибольшим количеством рейтингов для каждого жанра:
+
+для жанра Animation:
++-------+---------------------------+-----------+                               
+|movieId|title                      |num_ratings|
++-------+---------------------------+-----------+
+|1      |Toy Story (1995)           |76813      |
+|4306   |Shrek (2001)               |58529      |
+|588    |Aladdin (1992)             |55791      |
+|364    |Lion King, The (1994)      |53509      |
+|4886   |Monsters, Inc. (2001)      |48441      |
+|6377   |Finding Nemo (2003)        |48124      |
+|595    |Beauty and the Beast (1991)|45404      |
+|8961   |Incredibles, The (2004)    |42953      |
+|60069  |WALL·E (2008)              |42033      |
+|68954  |Up (2009)                  |38751      |
++-------+---------------------------+-----------+
+only showing top 10 rows
+
+
+для жанра Romance:
++-------+--------------------------------------------+-----------+              
+|movieId|title                                       |num_ratings|
++-------+--------------------------------------------+-----------+
+|356    |Forrest Gump (1994)                         |113581     |
+|2858   |American Beauty (1999)                      |69902      |
+|4306   |Shrek (2001)                                |58529      |
+|1704   |Good Will Hunting (1997)                    |54980      |
+|380    |True Lies (1994)                            |52789      |
+|1197   |Princess Bride, The (1987)                  |50775      |
+|1721   |Titanic (1997)                              |50706      |
+|377    |Speed (1994)                                |49029      |
+|1265   |Groundhog Day (1993)                        |47956      |
+|7361   |Eternal Sunshine of the Spotless Mind (2004)|46292      |
++-------+--------------------------------------------+-----------+
+only showing top 10 rows
+
+
+для жанра Documentary:
++-------+-------------------------------------------------------+-----------+   
+|movieId|title                                                  |num_ratings|
++-------+-------------------------------------------------------+-----------+
+|5669   |Bowling for Columbine (2002)                           |16608      |
+|8464   |Super Size Me (2004)                                   |14077      |
+|246    |Hoop Dreams (1994)                                     |11731      |
+|8622   |Fahrenheit 9/11 (2004)                                 |11553      |
+|2064   |Roger & Me (1989)                                      |8296       |
+|162    |Crumb (1994)                                           |6758       |
+|5785   |Jackass: The Movie (2002)                              |5685       |
+|34072  |March of the Penguins (Marche de l'empereur, La) (2005)|4542       |
+|1147   |When We Were Kings (1996)                              |4207       |
+|45950  |Inconvenient Truth, An (2006)                          |4168       |
++-------+-------------------------------------------------------+-----------+
+only showing top 10 rows
+
+Первые 10 фильмов с наименьшим количеством рейтингов для каждого жанра:
+
+для жанра Animation:
++-------+------------------------------------------------------+-----------+    
+|movieId|title                                                 |num_ratings|
++-------+------------------------------------------------------+-----------+
+|152637 |The Tangerine Bear: Home in Time for Christmas! (2000)|11         |
+|182307 |Funny Little Bunnies (1934)                           |11         |
+|165877 |The Dark Stranger (2016)                              |11         |
+|118944 |A Chairy Tale (1957)                                  |11         |
+|217071 |DC Showcase: Sgt. Rock (2019)                         |11         |
+|182189 |The Pied Piper (1933)                                 |11         |
+|163519 |Mouse in Manhattan (1945)                             |11         |
+|197835 |To Duck.... Or Not to Duck (1943)                     |11         |
+|172403 |Tamala 2010: A Punk Cat in Space (2002)               |11         |
+|222310 |Fearless (2020)                                       |11         |
++-------+------------------------------------------------------+-----------+
+only showing top 10 rows
+
+
+для жанра Romance:
++-------+------------------------------------+-----------+                      
+|movieId|title                               |num_ratings|
++-------+------------------------------------+-----------+
+|122084 |Solomon and Sheba (1959)            |11         |
+|78528  |East Side, West Side (1949)         |11         |
+|39857  |Nordkraft (2005)                    |11         |
+|184093 |The Boy Downstairs (2017)           |11         |
+|204436 |Chuchotage (2018)                   |11         |
+|120307 |Intermezzo (1936)                   |11         |
+|146170 |Saajan (1991)                       |11         |
+|121491 |Off Beat (2004)                     |11         |
+|121342 |Carry on Cruising (1962)            |11         |
+|64918  |Small Cuts (Petites coupures) (2003)|11         |
++-------+------------------------------------+-----------+
+only showing top 10 rows
+
+
+для жанра Documentary:
++-------+----------------------------------------------------+-----------+      
+|movieId|title                                               |num_ratings|
++-------+----------------------------------------------------+-----------+
+|138030 |The Chinese Mayor (2015)                            |11         |
+|135180 |K2: Siren of the Himalayas (2012)                   |11         |
+|192275 |Farmlands (2018)                                    |11         |
+|80599  |Buster Keaton: A Hard Act to Follow (1987)          |11         |
+|114003 |Return to Homs, The (2013)                          |11         |
+|64385  |Body of War (2007)                                  |11         |
+|90769  |Starsuckers (2009)                                  |11         |
+|176517 |Venus (2016)                                        |11         |
+|184923 |A Plastic Ocean (2016)                              |11         |
+|48647  |Last Bolshevik, The (Tombeau d'Alexandre, Le) (1993)|11         |
++-------+----------------------------------------------------+-----------+
+only showing top 10 rows
+
+-----------------------------------------------------
+Топ-10 фильмов с наибольшим средним рейтингом при количестве рейтингов больше 10 для каждого жанра:
+
+для жанра Animation:
++-------+----------------------------------------------------+------------------+
+|movieId|title                                               |average_rating    |
++-------+----------------------------------------------------+------------------+
+|163809 |Over the Garden Wall (2013)                         |4.256993006993007 |
+|286897 |Spider-Man: Across the Spider-Verse (2023)          |4.252840909090909 |
+|256991 |Adventure Time: Elements (2017)                     |4.25              |
+|5618   |Spirited Away (Sen to Chihiro no kamikakushi) (2001)|4.226035335689046 |
+|249180 |Violet Evergarden: The Movie (2020)                 |4.22              |
+|157373 |It's Such a Beautiful Day (2011)                    |4.1935975609756095|
+|195159 |Spider-Man: Into the Spider-Verse (2018)            |4.192053284336242 |
+|163134 |Your Name. (2016)                                   |4.16751269035533  |
+|3000   |Princess Mononoke (Mononoke-hime) (1997)            |4.166026555470207 |
+|5971   |My Neighbor Totoro (Tonari no Totoro) (1988)        |4.163490364025696 |
++-------+----------------------------------------------------+------------------+
+only showing top 10 rows
+
+
+для жанра Romance:
++-------+---------------------------------------------------+-----------------+ 
+|movieId|title                                              |average_rating   |
++-------+---------------------------------------------------+-----------------+
+|203847 |Kumbalangi Nights (2019)                           |4.305555555555555|
+|263965 |Downton Abbey: Christmas Special 2015 (2015)       |4.25             |
+|249180 |Violet Evergarden: The Movie (2020)                |4.22             |
+|122282 |Pride and Prejudice (1980)                         |4.206896551724138|
+|44555  |Lives of Others, The (Das leben der Anderen) (2006)|4.201409789323618|
+|172719 |Notre Dame de Paris (1998)                         |4.2              |
+|912    |Casablanca (1942)                                  |4.195889466578577|
+|922    |Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)      |4.189934559052665|
+|908    |North by Northwest (1959)                          |4.187337202394553|
+|163134 |Your Name. (2016)                                  |4.16751269035533 |
++-------+---------------------------------------------------+-----------------+
+only showing top 10 rows
+
+
+для жанра Documentary:
++-------+-----------------------------------------------------------------------------+-----------------+
+|movieId|title                                                                        |average_rating   |
++-------+-----------------------------------------------------------------------------+-----------------+
+|102672 |New York: A Documentary Film (1999)                                          |4.5              |
+|171011 |Planet Earth II (2016)                                                       |4.451739343459089|
+|159817 |Planet Earth (2006)                                                          |4.448092868988391|
+|215615 |Pink Floyd: Pulse (1995)                                                     |4.318181818181818|
+|179135 |Blue Planet II (2017)                                                        |4.312943962115233|
+|142115 |The Blue Planet (2001)                                                       |4.25             |
+|147124 |The Roosevelts: An Intimate History (2014)                                   |4.239130434782608|
+|105250 |Century of the Self, The (2002)                                              |4.221662468513854|
+|239316 |Can't Get You Out of My Head: An Emotional History of the Modern World (2021)|4.212765957446808|
+|172725 |The Secret Life of Chaos (2010)                                              |4.208333333333333|
++-------+-----------------------------------------------------------------------------+-----------------+
+only showing top 10 rows
+
+Топ-10 фильмов с наименьшим средним рейтингом при количестве рейтингов больше 10 для каждого жанра:
+
+для жанра Animation:
++-------+--------------------------------------------------------+------------------+
+|movieId|title                                                   |average_rating    |
++-------+--------------------------------------------------------+------------------+
+|120222 |Foodfight! (2012)                                       |0.9456521739130435|
+|170903 |The Swan Princess Christmas (2012)                      |1.1363636363636365|
+|153564 |The Amazing Bulk (2012)                                 |1.1666666666666667|
+|145096 |Barbie & Her Sisters in the Great Puppy Adventure (2015)|1.1923076923076923|
+|151313 |Norm of the North (2016)                                |1.5086206896551724|
+|6371   |Pokémon Heroes (2003)                                   |1.519721577726218 |
+|5672   |Pokemon 4 Ever (a.k.a. Pokémon 4: The Movie) (2002)     |1.5358306188925082|
+|136674 |Maya the Bee Movie (2014)                               |1.5833333333333333|
+|200802 |Norm of the North: Keys to the Kingdom (2018)           |1.5909090909090908|
+|179107 |The Legend of the Titanic (1999)                        |1.6363636363636365|
++-------+--------------------------------------------------------+------------------+
+only showing top 10 rows
+
+
+для жанра Romance:
++-------+-------------------------------------+------------------+              
+|movieId|title                                |average_rating    |
++-------+-------------------------------------+------------------+
+|171479 |Kidnapping, Caucasian Style (2014)   |0.9117647058823529|
+|6483   |From Justin to Kelly (2003)          |1.0112474437627812|
+|4775   |Glitter (2001)                       |1.151015228426396 |
+|6587   |Gigli (2003)                         |1.2144495412844036|
+|103186 |Wedding Trough (Vase de noces) (1975)|1.4333333333333333|
+|145388 |Forever (2015)                       |1.5               |
+|171555 |Classmates (2016)                    |1.5               |
+|153816 |Tashan (2008)                        |1.5454545454545454|
+|3390   |Shanghai Surprise (1986)             |1.5637450199203187|
+|43919  |Date Movie (2006)                    |1.6176991150442477|
++-------+-------------------------------------+------------------+
+only showing top 10 rows
+
+
+для жанра Documentary:
++-------+---------------------------------------+------------------+            
+|movieId|title                                  |average_rating    |
++-------+---------------------------------------+------------------+
+|107704 |Justin Bieber's Believe (2013)         |0.9285714285714286|
+|193183 |Death of a Nation (2018)               |1.2142857142857142|
+|5739   |Faces of Death 6 (1996)                |1.2865168539325842|
+|121103 |Justin Bieber: Never Say Never (2011)  |1.2936507936507937|
+|5738   |Faces of Death 5 (1996)                |1.365625          |
+|5740   |Faces of Death: Fact or Fiction? (1999)|1.3759398496240602|
+|158731 |Kony 2012 (2012)                       |1.3846153846153846|
+|5737   |Faces of Death 4 (1990)                |1.3945945945945946|
+|5736   |Faces of Death 3 (1985)                |1.4951690821256038|
+|166741 |Electrocuting an Elephant (1903)       |1.53125           |
++-------+---------------------------------------+------------------+
+only showing top 10 rows
