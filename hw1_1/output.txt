@@ -1,0 +1,52 @@
+ubuntu@linux:~/BigData/hw$ python3 ./hw1_1/hw1_1.py 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/15 00:46:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/home/ubuntu/.local/lib/python3.6/site-packages/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+Топ-10 заведений, ближайших к заданной точке:                                   
+Мареа: 1.0559798951332569 km
+Стейк Хаус «Бизон»: 1.0589954786365592 km
+ЛяМур: 1.0653160192677953 km
+БИБЛИОТЕКА Shisha Lounge: 1.0660394227719348 km
+Му-Му: 1.0660394227719348 km
+Unlock cafe: 1.068434726445881 km
+Папа Джонс: 1.0684740633210594 km
+Jimmy Poy: 1.0689126448699375 km
+Шоколадница: 1.0698960789164584 km
+Настоишная: 1.0699528509885545 km
+                                                                                
+Топ-10 ближаших заведений среди всех:
+('Погребок', 'Beer Gik'): 0.0 km
+('TEMPO DI PASTA', 'Хлеб насущный'): 0.0 km
+('Beer Gik', 'Kozlovna'): 0.0 km
+('Погребок', 'Kozlovna'): 0.0 km
+('Beer Gik', 'Па-Паэлья'): 0.0 km
+('Погребок', 'Па-Паэлья'): 0.0 km
+('Глав Пив Маг', 'Beermood'): 0.0 km
+('Блэк милк', 'Дабл Би'): 0.0 km
+('Jeffreys coffee', 'Мегобари'): 0.0 km
+('Блэк милк', 'Коленки Пчелы'): 0.0 km
+                                                                                
+Топ-10 наиболее близких и наиболее отдаленных заведений:
+('Погребок', 'Beer Gik'): 0.0 km
+('TEMPO DI PASTA', 'Хлеб насущный'): 0.0 km
+('Beer Gik', 'Kozlovna'): 0.0 km
+('Погребок', 'Kozlovna'): 0.0 km
+('Beer Gik', 'Па-Паэлья'): 0.0 km
+('Погребок', 'Па-Паэлья'): 0.0 km
+('Глав Пив Маг', 'Beermood'): 0.0 km
+('Блэк милк', 'Дабл Би'): 0.0 km
+('Jeffreys coffee', 'Мегобари'): 0.0 km
+('Блэк милк', 'Коленки Пчелы'): 0.0 km
+('МНИТИ', 'Calabash Club'): 5.456078051728195 km
+('МНИТИ', 'Залечь на дно'): 5.456078051728195 km
+('МНИТИ', 'Политех'): 5.456078051728195 km
+('МНИТИ', 'Антикафе Checkpoint'): 5.456078051728195 km
+('Шоколадница', 'МНИТИ'): 5.402045734317042 km
+('МНИТИ', 'Мареа'): 5.397580177415824 km
+('МНИТИ', 'БИБЛИОТЕКА Shisha Lounge'): 5.394562231325749 km
+('МНИТИ', 'Му-Му'): 5.394562231325749 km
+('МНИТИ', 'Стейк Хаус «Бизон»'): 5.393724300813252 km
+('МНИТИ', 'Jimmy Poy'): 5.382099204718485 km

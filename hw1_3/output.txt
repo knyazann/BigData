@@ -1,0 +1,22 @@
+ubuntu@linux:~/BigData/hw$ python3 ./hw1_3/hw1_3.py
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/15 00:53:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/home/ubuntu/.local/lib/python3.6/site-packages/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
++-------+--------------------------------+----------+                           
+|movieId|title                           |Similarity|
++-------+--------------------------------+----------+
+|1580   |Men in Black (a.k.a. MIB) (1997)|1.0       |
+|2366   |King Kong (1933)                |1.0       |
+|3175   |Galaxy Quest (1999)             |1.0       |
+|1088   |Dirty Dancing (1987)            |1.0       |
+|32460  |Knockin' on Heaven's Door (1997)|1.0       |
+|44022  |Ice Age 2: The Meltdown (2006)  |1.0       |
+|96488  |Searching for Sugar Man (2012)  |1.0       |
+|1238   |Local Hero (1983)               |1.0       |
+|1342   |Candyman (1992)                 |1.0       |
+|1591   |Spawn (1997)                    |1.0       |
++-------+--------------------------------+----------+
+only showing top 10 rows
